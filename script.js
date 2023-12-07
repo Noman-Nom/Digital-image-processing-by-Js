@@ -26,9 +26,32 @@ const calculate = ()=>{
    const inputData =  getInputData('inputData')
 //    console.log("input Data =",  inputData)
 
-        const resultData = inputData.map((values)=>{
-                console.log( "values",values)
+      const normalizeData = inputData.map((value)=>{
+            const normalizeValue = value/4096
+
+            console.log("Normaloze Value = ", normalizeValue)
+
+            return normalizeValue
+
         })
-}
 
+        // console.log("data= ", normalizeData)
+       const sortData = normalizeData.slice().sort((a,b)=>{
+        //    console.log(`${a} - ${b} = ${a-b}` )
+            const data = a-b
+            // console.log( "data = ", data)
+            return data
+       })
 
+        console.log( "sortData = ", sortData)
+
+        const cdf = sortData.reduce((accumulator , value , index)=>{
+
+            accumulator.push(index > 0 ? accumulator[index - 1] + value : value )
+            return accumulator 
+
+        },[])
+
+        console.log("CDF = ", cdf)
+
+    }
