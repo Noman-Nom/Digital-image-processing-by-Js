@@ -14,7 +14,9 @@ const getInputData = (inputData)=>{
       
     }
     
-    console.log(values)
+    console.log( "input values = ",values)
+
+    return values
     }
 
 
