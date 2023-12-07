@@ -23,7 +23,12 @@ const getInputData = (inputData)=>{
 
 const calculate = ()=>{
 
-    getInputData('inputData')
+   const inputData =  getInputData('inputData')
+//    console.log("input Data =",  inputData)
+
+        const resultData = inputData.map((values)=>{
+                console.log( "values",values)
+        })
 }
 
 
