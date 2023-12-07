@@ -54,4 +54,12 @@ const calculate = ()=>{
 
         console.log("CDF = ", cdf)
 
+     const EquilizedHistogram = cdf.map((value)=>{
+            const result = Math.round(value*7) 
+            return result
+
+     })
+
+     console.log("Equilized Histogram = " , EquilizedHistogram)
+
     }
