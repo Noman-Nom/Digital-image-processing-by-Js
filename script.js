@@ -36,16 +36,16 @@ const calculate = ()=>{
         })
 
         // console.log("data= ", normalizeData)
-       const sortData = normalizeData.slice().sort((a,b)=>{
-        //    console.log(`${a} - ${b} = ${a-b}` )
-            const data = a-b
-            // console.log( "data = ", data)
-            return data
-       })
+    //    const sortData = normalizeData.slice().sort((a,b)=>{
+    //     //    console.log(`${a} - ${b} = ${a-b}` )
+    //         const data = a-b
+    //         // console.log( "data = ", data)
+    //         return data
+    //    })
 
-        console.log( "sortData = ", sortData)
+        // console.log( "sortData = ", sortData)
 
-        const cdf = sortData.reduce((accumulator , value , index)=>{
+        const cdf = normalizeData.reduce((accumulator , value , index)=>{
 
             accumulator.push(index > 0 ? accumulator[index - 1] + value : value )
             return accumulator 
